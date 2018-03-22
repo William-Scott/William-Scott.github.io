@@ -3,15 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>异丙纯的博客</title>
+  <title>canvas标签+js实现简易贪吃蛇 | 异丙纯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="异丙纯的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="使用JS开发简易贪吃蛇演示页面在这里——&amp;gt;贪吃蛇 首先采用2xN二维数组表示蛇的位置var r = [{x:10,y:9},{x:10,y:8}];用var co = x;表示前进方向，x为键盘上下左右键值，例如采用如下语句通过判断co的值来进行移动：123456789101112131415161718switch(co)&amp;#123;						case 37:							r[0].x">
+<meta name="keywords" content="Javascript,前端,游戏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas标签+js实现简易贪吃蛇">
+<meta property="og:url" content="http://yoursite.com/2018/03/22/canvas标签+js实现简易贪吃蛇/index.html">
 <meta property="og:site_name" content="异丙纯的博客">
+<meta property="og:description" content="使用JS开发简易贪吃蛇演示页面在这里——&amp;gt;贪吃蛇 首先采用2xN二维数组表示蛇的位置var r = [{x:10,y:9},{x:10,y:8}];用var co = x;表示前进方向，x为键盘上下左右键值，例如采用如下语句通过判断co的值来进行移动：123456789101112131415161718switch(co)&amp;#123;						case 37:							r[0].x">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-03-22T10:57:51.015Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异丙纯的博客">
+<meta name="twitter:title" content="canvas标签+js实现简易贪吃蛇">
+<meta name="twitter:description" content="使用JS开发简易贪吃蛇演示页面在这里——&amp;gt;贪吃蛇 首先采用2xN二维数组表示蛇的位置var r = [{x:10,y:9},{x:10,y:8}];用var co = x;表示前进方向，x为键盘上下左右键值，例如采用如下语句通过判断co的值来进行移动：123456789101112131415161718switch(co)&amp;#123;						case 37:							r[0].x">
   
     <link rel="alternate" href="/atom.xml" title="异丙纯的博客" type="application/atom+xml">
   
@@ -64,9 +69,7 @@
   </div>
 </div>
 
-        <section id="main">
-  
-    <article id="post-canvas标签+js实现简易贪吃蛇" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-canvas标签+js实现简易贪吃蛇" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/03/22/canvas标签+js实现简易贪吃蛇/" class="article-date">
   <time class="post-time" datetime="2018-03-22T09:59:14.000Z" itemprop="datePublished">
@@ -82,8 +85,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/22/canvas标签+js实现简易贪吃蛇/">canvas标签+js实现简易贪吃蛇</a>
+    <h1 class="article-title" itemprop="name">
+      canvas标签+js实现简易贪吃蛇
     </h1>
   
 
@@ -117,118 +120,21 @@
     </footer>
   </div>
   
-</article>
-
-
-
-
-  
-    <article id="post-C-面试常见基础问题" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/22/C-面试常见基础问题/" class="article-date">
-  <time class="post-time" datetime="2018-03-22T00:30:14.000Z" itemprop="datePublished">
-    <span class="post-month">3月</span><br/>
-    <span class="post-day">22</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
     
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/22/C-面试常见基础问题/">C++面试常见基础问题</a>
-    </h1>
   
+    <a href="/2018/03/22/C-面试常见基础问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">C++面试常见基础问题</div>
+    </a>
+  
+</nav>
 
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-在C-程序中调用被C-编译器编译后的函数，为什么要加extern-“C”？"><a href="#1-在C-程序中调用被C-编译器编译后的函数，为什么要加extern-“C”？" class="headerlink" title="1.在C++ 程序中调用被C 编译器编译后的函数，为什么要加extern “C”？"></a>1.在C++ 程序中调用被C 编译器编译后的函数，为什么要加extern “C”？</h3><p>答：首先，extern是C/C++语言中表明函数和全局变量作用范围的关键字，该关键字告诉编译器，其声明的函数和变量可以在本模块或其它模块中使用。通常，在模块的头文件中对本模块提供给其它模块引用的函数和全局变量以关键字extern声明。extern “C”是连接申明(linkage declaration),被extern “C”修饰的变量和函数是按照C语言方式编译和连接的。作为一种面向对象的语言，C++支持函数重载，而过程式语言C则不支持。函数被C++编译后在符号库中的名字与C语言的不同。例如，假设某个函数的原型为：void foo( int x, int y );该函数被C编译器编译后在符号库中的名字为_foo，而C++编译器则会产生像_foo_int_int之类的名字。这样的名字包含了函数名、函数参数数量及类型信息，C++就是靠这种机制来实现函数重载的。所以，可以用一句话概括extern “C”这个声明的真实目的:解决名字匹配问题，实现C++与C的混合编程。<br>
-        
-          <p class="article-more-link">
-            <a href="/2018/03/22/C-面试常见基础问题/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/22/C-面试常见基础问题/" data-id="cjf2emo140005m8ss36dkt7ik" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
 
 
-
-
-  
-    <article id="post-welcome" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/03/21/welcome/" class="article-date">
-  <time class="post-time" datetime="2018-03-21T13:52:19.000Z" itemprop="datePublished">
-    <span class="post-month">3月</span><br/>
-    <span class="post-day">21</span>
-  </time>
-</a>
-   
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/21/welcome/">welcome</a>
-    </h1>
-  
-
-        <div>
-          
-          
-              
-
-          
-        </div>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>终于，终于，我还是用了Hexo，自己写站点太麻烦了，毕竟主要是为了写博客而不是写网站</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/21/welcome/" data-id="cjf2emo0x0002m8sscrrizm0v" class="article-share-link">分享</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-
-
-  
 
 </section>
         
