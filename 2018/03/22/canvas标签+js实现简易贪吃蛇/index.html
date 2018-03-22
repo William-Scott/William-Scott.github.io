@@ -30,6 +30,10 @@
   <link rel="stylesheet" href="/plugin/bganimation/bg.css">
   
 
+  <!-- ����gitment��css��js�ļ� -->
+  <link rel="stylesheet" href="/css/gitment.css"> 
+  <script src="/js/gitment.js"></script>
+
 </head>
 
 <body>
@@ -134,6 +138,24 @@
 </article>
 
 
+
+
+
+<div id="gitment"></div>
+<!-- ��ҳ��Ҫ����gitment -->
+
+<script>
+var gitment = new Gitment({
+  owner: 'william-scott',
+  repo: 'William-Scott.github.io',
+  oauth: {
+    client_id: '1dbfa70d518d89326cea',
+    client_secret: '86a61fc38e87bf8fcb166f232cefa25dc151fa30',
+  },
+})
+gitment.render('gitment')
+</script>
+ 
 
 </section>
         
