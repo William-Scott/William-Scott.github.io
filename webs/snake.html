@@ -52,9 +52,9 @@
     <h2 class="author">异丙纯</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
       <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>10</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>12</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -212,7 +212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/webs/snake.html" data-id="cjf7hlihp0013zwssx8dphw8s" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/webs/snake.html" data-id="cjf7rcn5m001f88sss2wiwdyt" class="article-share-link">分享</a>
       
       
     </footer>
@@ -282,9 +282,9 @@ gitment.render('gitment')
     <h2 class="author">异丙纯</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
       <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>10</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>12</strong><br>标签</div></a>
     </div>
 
 
@@ -338,6 +338,45 @@ new WOW().init();
   <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
 
 
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/xxxxxxxxx" title="" class="menuItem">微博</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">仓库</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
 
   <section class="hidden-xs"> 
   <ul class="cb-slideshow"> 

@@ -53,9 +53,9 @@
     <h2 class="author">异丙纯</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
       <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>10</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>12</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -122,7 +122,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/26/今后会转载一些文章和教程/" data-id="cjf7hlif50006zwssf18t94ks" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/03/26/今后会转载一些文章和教程/" data-id="cjf7rcn42000788sstgm904pt" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
@@ -132,6 +132,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2018/03/26/史记番外篇——计算机字符编码/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          史记番外篇——计算机字符编码
+        
+      </div>
+    </a>
   
   
     <a href="/2018/03/25/canvas标签-js实现雨滴动画/" id="article-nav-older" class="article-nav-link-wrap">
@@ -204,9 +213,9 @@ gitment.render('gitment')
     <h2 class="author">异丙纯</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>6</strong><br>文章</div></a>
+      <a href="/archives"><div><strong>7</strong><br>文章</div></a>
       <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>10</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>12</strong><br>标签</div></a>
     </div>
 
 
@@ -260,6 +269,45 @@ new WOW().init();
   <script src="/plugin/fancybox/jquery.fancybox.pack.js"></script>
 
 
+
+  <link rel="stylesheet" href="/plugin/galmenu/GalMenu.css">
+  <script src="/plugin/galmenu/GalMenu.js"></script>
+  <div class="GalMenu GalDropDown">
+      <div class="circle" id="gal">
+        <div class="ring">
+          
+            <a href="/" title="" class="menuItem">首页</a>
+          
+            <a href="/tags" title="" class="menuItem">标签</a>
+          
+            <a href="/categories" title="" class="menuItem">分类</a>
+          
+            <a href="/archives" title="" class="menuItem">归档</a>
+          
+            <a href="/xxxxxxxxx" title="" class="menuItem">微博</a>
+          
+            <a href="/xxxxxxx" title="" class="menuItem">仓库</a>
+          
+        </div>
+        
+          <audio id="audio" src="#"></audio>
+        
+      </div> 
+</div>
+<div id="overlay" style="opacity: 1; cursor: pointer;"></div>
+  <script type="text/javascript">var items = document.querySelectorAll('.menuItem');
+    for (var i = 0,
+    l = items.length; i < l; i++) {
+      items[i].style.left = (50 - 35 * Math.cos( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%";
+      items[i].style.top = (50 + 35 * Math.sin( - 0.5 * Math.PI - 2 * (1 / l) * i * Math.PI)).toFixed(4) + "%"
+    }</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('body').GalMenu({
+      'menu': 'GalDropDown'
+    })
+  });
+</script>
 
   <section class="hidden-xs"> 
   <ul class="cb-slideshow"> 
