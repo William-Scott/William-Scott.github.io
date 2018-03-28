@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>canvas标签+js实现简易贪吃蛇 | 异丙纯的博客</title>
+  <title>C语言自定义交换函数（swap）的正确使用姿势 | 异丙纯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="使用JS开发简易贪吃蛇演示页面在这里——&amp;gt;贪吃蛇">
-<meta name="keywords" content="Javascript,前端,游戏">
+  <meta name="description" content="今天同学给了我一道题的代码，说他自己找了半天错误也没有AC那道题，让我给看看。拿到代码看了一下，发现一个很严重的误区，专门写出来说一下。全部代码我就不贴了，我只是就那个误区构造了一段错误的代码。">
+<meta name="keywords" content="C语言,误区">
 <meta property="og:type" content="article">
-<meta property="og:title" content="canvas标签+js实现简易贪吃蛇">
-<meta property="og:url" content="http://yoursite.com/2018/03/22/canvas标签+js实现简易贪吃蛇/index.html">
+<meta property="og:title" content="C语言自定义交换函数（swap）的正确使用姿势">
+<meta property="og:url" content="http://yoursite.com/2018/03/28/C语言自定义交换函数（swap）的正确使用姿势/index.html">
 <meta property="og:site_name" content="异丙纯的博客">
-<meta property="og:description" content="使用JS开发简易贪吃蛇演示页面在这里——&amp;gt;贪吃蛇">
+<meta property="og:description" content="今天同学给了我一道题的代码，说他自己找了半天错误也没有AC那道题，让我给看看。拿到代码看了一下，发现一个很严重的误区，专门写出来说一下。全部代码我就不贴了，我只是就那个误区构造了一段错误的代码。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-25T14:04:24.900Z">
+<meta property="og:updated_time" content="2018-03-28T13:17:56.699Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="canvas标签+js实现简易贪吃蛇">
-<meta name="twitter:description" content="使用JS开发简易贪吃蛇演示页面在这里——&amp;gt;贪吃蛇">
+<meta name="twitter:title" content="C语言自定义交换函数（swap）的正确使用姿势">
+<meta name="twitter:description" content="今天同学给了我一道题的代码，说他自己找了半天错误也没有AC那道题，让我给看看。拿到代码看了一下，发现一个很严重的误区，专门写出来说一下。全部代码我就不贴了，我只是就那个误区构造了一段错误的代码。">
   
     <link rel="alternate" href="/atom.xml" title="异丙纯的博客" type="application/atom+xml">
   
@@ -79,12 +79,12 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-canvas标签+js实现简易贪吃蛇" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-C语言自定义交换函数（swap）的正确使用姿势" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/03/22/canvas标签+js实现简易贪吃蛇/" class="article-date">
-  <time class="post-time" datetime="2018-03-22T09:59:14.000Z" itemprop="datePublished">
+    <a href="/2018/03/28/C语言自定义交换函数（swap）的正确使用姿势/" class="article-date">
+  <time class="post-time" datetime="2018-03-28T13:07:46.000Z" itemprop="datePublished">
     <span class="post-month">3月</span><br/>
-    <span class="post-day">22</span>
+    <span class="post-day">28</span>
   </time>
 </a>
    
@@ -96,7 +96,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      canvas标签+js实现简易贪吃蛇
+      C语言自定义交换函数（swap）的正确使用姿势
     </h1>
   
 
@@ -115,20 +115,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="使用JS开发简易贪吃蛇"><a href="#使用JS开发简易贪吃蛇" class="headerlink" title="使用JS开发简易贪吃蛇"></a>使用JS开发简易贪吃蛇</h3><p>演示页面在这里——&gt;<a href="../../../../webs/snake.html">贪吃蛇</a><br><a id="more"></a><br>首先采用2xN二维数组表示蛇的位置<code>var r = [{x:10,y:9},{x:10,y:8}];</code><br><br>用<code>var co = x;</code>表示前进方向，<code>x</code>为键盘上下左右键值，例如采用如下语句通过判断<code>co</code>的值来进行移动：<br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">switch(co)&#123;</span><br><span class="line">	case 37:</span><br><span class="line">		r[0].x = r[1].x - 1;</span><br><span class="line">		r[0].y = r[1].y;</span><br><span class="line">		break;</span><br><span class="line">	case 38:</span><br><span class="line">		r[0].x = r[1].x;</span><br><span class="line">		r[0].y = r[1].y - 1;</span><br><span class="line">		break;</span><br><span class="line">	case 39:</span><br><span class="line">		r[0].x = r[1].x + 1;</span><br><span class="line">		r[0].y = r[1].y;</span><br><span class="line">		break;</span><br><span class="line">	case 40:</span><br><span class="line">		r[0].x = r[1].x;</span><br><span class="line">		r[0].y = r[1].y + 1;</span><br><span class="line">		break;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>而蛇体的移动则通过把数组末尾元素放到第一位如此循环往复来实现，代码如下：<br><br><code>r.unshift(r.pop());</code><br><br>食物通过1x2的一维数组表示:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var e = null;</span><br><span class="line">if (e == null)&#123;e = &#123;y:(Math.random()*50 &gt;&gt;&gt; 0),x:(Math.random()*50 &gt;&gt;&gt; 0)&#125;;&#125;</span><br></pre></td></tr></table></figure></p>
-<p>并且绘制：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">if (e)&#123;ctx.fillRect(e.x*10,e.y*10,10,10);&#125;</span><br></pre></td></tr></table></figure></p>
-<p>由此可见，我们是通过<code>fillRect()</code>函数绘制蛇体，此函数可以方便地将二维数组作为坐标绘制贪吃蛇，具体代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for (var i=0;i&lt;r.length ;i++ )&#123;ctx.fillRect(r[i].x*10,r[i].y*10,10,10);&#125;</span><br></pre></td></tr></table></figure></p>
-<p>键盘监视则通过键盘事件函数完成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">document.onkeydown = function(event)&#123;</span><br><span class="line">if (event.keyCode&gt;=37 &amp;&amp; event.keyCode&lt;=40 &amp;&amp; Math.abs(event.keyCode-co) != 2)</span><br><span class="line">&#123;</span><br><span class="line">      co = event.keyCode;</span><br><span class="line">&#125;else if (event.keyCode == 32)&#123;</span><br><span class="line">                                stop = !stop;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>完整源代码可通过在演示页面调用开发者工具（F12）获得</p>
+        <p>今天同学给了我一道题的代码，说他自己找了半天错误也没有AC那道题，让我给看看。拿到代码看了一下，发现一个很严重的误区，专门写出来说一下。全部代码我就不贴了，我只是就那个误区构造了一段错误的代码。<br><a id="more"></a><br><br><em>文章来源<a href="www.slyar.com">Slyar Home</a></em> <br><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">void swap(int x,int y)//这是错误的写法</span><br><span class="line">&#123;</span><br><span class="line">  int temp;</span><br><span class="line">  temp=x;</span><br><span class="line">  x=y;</span><br><span class="line">  y=temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  int a=5,b=8;</span><br><span class="line">  swap(a,b);</span><br><span class="line">  printf(&quot;%d %d\n&quot;,a,b);</span><br><span class="line">  return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>代码很容易理解，就是交换2个变量a和b的值并输出，但是运行后我们发现输出结果不是”8 5”而依旧是”5 8”，也就是说交换函数并没有将2个变量的值交换，这是为什么呢？</p>
+<p>我们知道，C语言中整型变量的形式参数传递的是值而不是地址，也就是形式参数实际上是复制了实际参数的值进入函数运算的，而被复制的实际参数的值并没有改变。就这段代码来说，就是形参x复制了a的值变成5，形参y复制了b的值变成8，然后在swap函数中进行交换，使得x=8,y=5，但实际上a和b的值并没有被交换，这也就是为什么这段代码并没有实现交换的原因。</p>
+<p>那么怎么解决呢？</p>
+<p>先前我们说了C语言中整型变量的形式参数传递的是值而不是地址，那么现在我们就让它传递地址，直接交换实际参数的值。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">void swap(int *x,int *y)//使用指针传递地址</span><br><span class="line">&#123;</span><br><span class="line">int temp;</span><br><span class="line">temp=*x;</span><br><span class="line">*x=*y;</span><br><span class="line">*y=temp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int a=5,b=8;</span><br><span class="line">swap(&amp;a,&amp;b);</span><br><span class="line">printf(&quot;%d %d\n&quot;,a,b);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>我们使用指针变量来进行地址传递，形式参数为变量a和b的地址，swap函数直接交换a和b的地址所指向的值。这里一定注意形式参数传递的是地址而不是值。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/22/canvas标签+js实现简易贪吃蛇/" data-id="cjfb48v6z0006msss6fwdzch9" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/03/28/C语言自定义交换函数（swap）的正确使用姿势/" data-id="cjfb48v6x0005msss1bnw3xlf" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏/">游戏</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C语言/">C语言</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/误区/">误区</a></li></ul>
 
     </footer>
   </div>
@@ -136,19 +136,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/03/25/15道Google智力面试题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          15道Google智力面试题
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/03/22/C-面试常见基础问题/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/03/28/史记番外篇——排序算法/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">下一篇</strong>
-      <div class="article-nav-title">C++面试常见基础问题</div>
+      <div class="article-nav-title">史记番外篇——排序算法</div>
     </a>
   
 </nav>
@@ -165,7 +156,7 @@
 
 <script>
 var gitment = new Gitment({
-  id: 'Thu Mar 22 2018 17:59:14 GMT+0800',
+  id: 'Wed Mar 28 2018 21:07:46 GMT+0800',
   owner: 'william-scott',
   repo: 'William-Scott.github.io',
   oauth: {
