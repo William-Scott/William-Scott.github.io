@@ -3,20 +3,20 @@
 <head>
   <meta charset="utf-8">
   
-  <title>welcome | 异丙纯的博客</title>
+  <title>史记番外篇——排序算法 | 异丙纯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="终于，终于，我还是用了Hexo，自己写站点太麻烦了，毕竟主要是为了写博客而不是写网站">
-<meta name="keywords" content="折腾">
+  <meta name="description" content="正所谓，天下大势，合久必分，分久必合，本篇文章来介绍一下——排序算法的演变历程">
+<meta name="keywords" content="排序算法,数据结构">
 <meta property="og:type" content="article">
-<meta property="og:title" content="welcome">
-<meta property="og:url" content="http://yoursite.com/2018/03/21/welcome/index.html">
+<meta property="og:title" content="史记番外篇——排序算法">
+<meta property="og:url" content="http://yoursite.com/2018/03/28/史记番外篇——排序算法/index.html">
 <meta property="og:site_name" content="异丙纯的博客">
-<meta property="og:description" content="终于，终于，我还是用了Hexo，自己写站点太麻烦了，毕竟主要是为了写博客而不是写网站">
+<meta property="og:description" content="正所谓，天下大势，合久必分，分久必合，本篇文章来介绍一下——排序算法的演变历程">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-03-25T13:15:07.906Z">
+<meta property="og:updated_time" content="2018-03-28T10:47:05.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="welcome">
-<meta name="twitter:description" content="终于，终于，我还是用了Hexo，自己写站点太麻烦了，毕竟主要是为了写博客而不是写网站">
+<meta name="twitter:title" content="史记番外篇——排序算法">
+<meta name="twitter:description" content="正所谓，天下大势，合久必分，分久必合，本篇文章来介绍一下——排序算法的演变历程">
   
     <link rel="alternate" href="/atom.xml" title="异丙纯的博客" type="application/atom+xml">
   
@@ -79,12 +79,12 @@
   </div>
 </div>
 
-        <section id="main"><article id="post-welcome" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-史记番外篇——排序算法" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/03/21/welcome/" class="article-date">
-  <time class="post-time" datetime="2018-03-21T13:52:19.000Z" itemprop="datePublished">
+    <a href="/2018/03/28/史记番外篇——排序算法/" class="article-date">
+  <time class="post-time" datetime="2018-03-28T02:33:02.000Z" itemprop="datePublished">
     <span class="post-month">3月</span><br/>
-    <span class="post-day">21</span>
+    <span class="post-day">28</span>
   </time>
 </a>
    
@@ -96,7 +96,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      welcome
+      史记番外篇——排序算法
     </h1>
   
 
@@ -115,15 +115,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>终于，终于，我还是用了Hexo，自己写站点太麻烦了，毕竟主要是为了写博客而不是写网站</p>
+        <p>正所谓，天下大势，合久必分，分久必合，本篇文章来介绍一下——排序算法的演变历程<br><a id="more"></a></p>
+<p>说道排序算法，快的慢的，正常的非正常的（猴子排序），可以说是多如牛毛，本文主要涉及一下十种：</p>
+<ul>
+<li>比较排序<ul>
+<li>冒泡排序</li>
+<li>快速排序</li>
+<li>直接插入排序</li>
+<li>简单选择排序</li>
+<li>希尔排序</li>
+<li>归并排序</li>
+<li>堆排序</li>
+</ul>
+</li>
+<li>非比较排序<ul>
+<li>计数排序</li>
+<li>桶排序</li>
+<li>基数排序</li>
+</ul>
+</li>
+</ul>
+<h3 id="冒泡排序——Bubble-sort"><a href="#冒泡排序——Bubble-sort" class="headerlink" title="冒泡排序——Bubble sort"></a>冒泡排序——Bubble sort</h3><p>冒泡排序可以算是最早实现和最简单的排序算法之一，早到甚至难以获悉发明者，因为历史上并没有人声明过自己发明了“冒泡排序”，而且此算法的出现时间甚至早于它的命名时间。在1998年，著名美国计算机科学家高德纳（Donald Ervin Knuth）出版的一本著作 <em>The Art of Computer Programming: Sorting and Searching</em> 中引用了1956年的一篇参考文献来分析算法，其中就有一个与“冒泡排序”非常相似的算法，不过那篇文献将其命名为“按交换排序（sorting by exchange）”。而且，尽管提到了“通过交换排序”算法，但是在1962年的ACM图灵大会的记录文献中并没有使用过“冒泡排序”这一术语。由于没有明确的“冒泡排序”这个名称的起源，我们只好通过查阅早期期刊文章以及专业教学文本来调查它的起源。</p>
+<p>早在1959年出版的一本名为 <em>Programming Business Computers</em> 的书中通过一整章来介绍过排序算法，但同样的，此书的作者们 <em>McCracken, D., Weiss, H., and Lee, T.</em> 使用了“交换排序”而不是“冒泡排序”；1962年，JACM（Journal of the ACM）杂志以及更早些时候（1961年，1959年发表）的引用过JACM杂志作为权威来源的文章中同样使用了相同的术语“交换排序”；直至1962年 <em>Iverson, K.</em> 在 <em>A Programming Language.</em> 首次使用了“冒泡排序（Bubble sort）”的名字，这似乎就是印刷类期刊上首次使用的例子了，正如我们接下来要注意的，1962年之前的任何一篇关于排序的文献都使用了除“冒泡排序”以外的词语来描述这个算法，这更加印证了Iverson是第一个使用该术语的说法，尽管这显然也是不确定的。</p>
+<p>尽管上文提到了很多早期的出版物，但是冒泡排序算法在1963年才正式进入ACM算法库，作为“175号算法”，而且是命名为“穿梭算法（Shuttle Sort）”，然而不久后公布此算法是“不是没有错误（not free from errors）”，这是一种婉转的方式说明一个算法是错误的，之后公布了修改后的代码</p>
+<hr>
+<p>普遍的冒泡排序写法（伪代码）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void BubbleSort(Vector a, int n)</span><br><span class="line">&#123;</span><br><span class="line">    for(int j=n-1; j &gt; 0; j--)</span><br><span class="line">        for(int k=0; k &lt; j; k++)</span><br><span class="line">            if (a[k+1] &lt; a[k])</span><br><span class="line">                Swap(a,k,k+1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="未完待续……"><a href="#未完待续……" class="headerlink" title="未完待续……"></a>未完待续……</h4><p><em>本文部分资源来源于网络</em></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/21/welcome/" data-id="cjfahvtt2000d68ss5mge17g7" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/03/28/史记番外篇——排序算法/" data-id="cjfayvq160000mgssqaxgxv74" class="article-share-link">分享</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/排序算法/">排序算法</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据结构/">数据结构</a></li></ul>
 
     </footer>
   </div>
@@ -131,15 +156,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2018/03/22/C-面试常见基础问题/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">上一篇</strong>
-      <div class="article-nav-title">
-        
-          C++面试常见基础问题
-        
-      </div>
-    </a>
   
+    <a href="/2018/03/27/10只老鼠与1000瓶药水/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">10只老鼠与1000瓶药水</div>
+    </a>
   
 </nav>
 
@@ -155,7 +176,7 @@
 
 <script>
 var gitment = new Gitment({
-  id: 'Wed Mar 21 2018 21:52:19 GMT+0800',
+  id: 'Wed Mar 28 2018 10:33:02 GMT+0800',
   owner: 'william-scott',
   repo: 'William-Scott.github.io',
   oauth: {
