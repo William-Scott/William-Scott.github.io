@@ -48,9 +48,9 @@
     <h2 class="author">异丙纯</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>11</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>18</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>13</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>3</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>22</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -75,6 +75,134 @@
 </div>
 
         <section id="main">
+  
+    <article id="post-canvas标签+js实现简易贪吃蛇" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/22/canvas标签+js实现简易贪吃蛇/" class="article-date">
+  <time class="post-time" datetime="2018-03-22T09:59:14.000Z" itemprop="datePublished">
+    <span class="post-month">3月</span><br/>
+    <span class="post-day">22</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/22/canvas标签+js实现简易贪吃蛇/">canvas标签+js实现简易贪吃蛇</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/程序/">程序</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="使用JS开发简易贪吃蛇"><a href="#使用JS开发简易贪吃蛇" class="headerlink" title="使用JS开发简易贪吃蛇"></a>使用JS开发简易贪吃蛇</h3><p>演示页面在这里——&gt;<a href="../../../../webs/snake.html">贪吃蛇</a><br>
+        
+          <p class="article-more-link">
+            <a href="/2018/03/22/canvas标签+js实现简易贪吃蛇/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/22/canvas标签+js实现简易贪吃蛇/" data-id="cjfq44whf000dmczm8oakm615" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/游戏/">游戏</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+<div id="gitment"></div>
+<!-- ��ҳ��Ҫ����gitment -->
+
+
+  
+    <article id="post-C-面试常见基础问题" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/03/22/C-面试常见基础问题/" class="article-date">
+  <time class="post-time" datetime="2018-03-22T00:30:14.000Z" itemprop="datePublished">
+    <span class="post-month">3月</span><br/>
+    <span class="post-day">22</span>
+  </time>
+</a>
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/22/C-面试常见基础问题/">C++面试常见基础问题</a>
+    </h1>
+  
+
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/文章/">文章</a>
+  </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-在C-程序中调用被C-编译器编译后的函数，为什么要加extern-“C”？"><a href="#1-在C-程序中调用被C-编译器编译后的函数，为什么要加extern-“C”？" class="headerlink" title="1.在C++ 程序中调用被C 编译器编译后的函数，为什么要加extern “C”？"></a>1.在C++ 程序中调用被C 编译器编译后的函数，为什么要加extern “C”？</h3><p>答：首先，extern是C/C++语言中表明函数和全局变量作用范围的关键字，该关键字告诉编译器，其声明的函数和变量可以在本模块或其它模块中使用。通常，在模块的头文件中对本模块提供给其它模块引用的函数和全局变量以关键字extern声明。extern “C”是连接申明(linkage declaration),被extern “C”修饰的变量和函数是按照C语言方式编译和连接的。作为一种面向对象的语言，C++支持函数重载，而过程式语言C则不支持。函数被C++编译后在符号库中的名字与C语言的不同。例如，假设某个函数的原型为：void foo( int x, int y );该函数被C编译器编译后在符号库中的名字为_foo，而C++编译器则会产生像_foo_int_int之类的名字。这样的名字包含了函数名、函数参数数量及类型信息，C++就是靠这种机制来实现函数重载的。所以，可以用一句话概括extern “C”这个声明的真实目的:解决名字匹配问题，实现C++与C的混合编程。<br>
+        
+          <p class="article-more-link">
+            <a href="/2018/03/22/C-面试常见基础问题/#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/03/22/C-面试常见基础问题/" data-id="cjfq44wfv0002mczmwiyvj1e5" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/面试/">面试</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+
+
+<div id="gitment"></div>
+<!-- ��ҳ��Ҫ����gitment -->
+
+
   
     <article id="post-welcome" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -117,7 +245,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/03/21/welcome/" data-id="cjfb48van001emsss98hzr1uy" class="article-share-link">分享</a>
+      <a data-url="http://yoursite.com/2018/03/21/welcome/" data-id="cjfq44wh70009mczm66zm13gk" class="article-share-link">分享</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/折腾/">折腾</a></li></ul>
@@ -180,9 +308,9 @@
     <h2 class="author">异丙纯</h2>
     <h3 class="description"></h3>
     <div class="count-box">
-      <a href="/archives"><div><strong>11</strong><br>文章</div></a>
-      <a href="/categories"><div><strong>2</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>18</strong><br>标签</div></a>
+      <a href="/archives"><div><strong>13</strong><br>文章</div></a>
+      <a href="/categories"><div><strong>3</strong><br>分类</div></a>
+      <a href="/tags"><div><strong>22</strong><br>标签</div></a>
     </div>
 
 

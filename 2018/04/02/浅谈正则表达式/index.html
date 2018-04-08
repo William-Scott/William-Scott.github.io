@@ -3,15 +3,22 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 智商 | 异丙纯的博客</title>
+  <title>浅谈正则表达式 | 异丙纯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="异丙纯的博客">
-<meta property="og:url" content="http://yoursite.com/tags/智商/index.html">
+  <meta name="description" content="正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE），又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法，是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。  ——维基百科">
+<meta name="keywords" content="正则表达式">
+<meta property="og:type" content="article">
+<meta property="og:title" content="浅谈正则表达式">
+<meta property="og:url" content="http://yoursite.com/2018/04/02/浅谈正则表达式/index.html">
 <meta property="og:site_name" content="异丙纯的博客">
+<meta property="og:description" content="正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE），又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法，是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。  ——维基百科">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://wx1.sinaimg.cn/large/dcfc9dbaly1fpxzyhsbdrj20k0171dlm.jpg">
+<meta property="og:updated_time" content="2018-04-02T10:51:20.920Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="异丙纯的博客">
+<meta name="twitter:title" content="浅谈正则表达式">
+<meta name="twitter:description" content="正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE），又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法，是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。  ——维基百科">
+<meta name="twitter:image" content="http://wx1.sinaimg.cn/large/dcfc9dbaly1fpxzyhsbdrj20k0171dlm.jpg">
   
     <link rel="alternate" href="/atom.xml" title="异丙纯的博客" type="application/atom+xml">
   
@@ -74,42 +81,104 @@
   </div>
 </div>
 
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap animated rubberBand">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/03/25/15道Google智力面试题/" class="archive-article-date">
-  <time class="post-time" datetime="2018-03-25T13:06:27.000Z" itemprop="datePublished">
-    <span class="post-month">3月</span><br/>
-    <span class="post-day">25</span>
+        <section id="main"><article id="post-浅谈正则表达式" class="wow slideInRight article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/02/浅谈正则表达式/" class="article-date">
+  <time class="post-time" datetime="2018-04-02T09:31:13.000Z" itemprop="datePublished">
+    <span class="post-month">4月</span><br/>
+    <span class="post-day">02</span>
   </time>
 </a>
-      
+   
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/03/25/15道Google智力面试题/">15道Google智力面试题</a>
+    <h1 class="article-title" itemprop="name">
+      浅谈正则表达式
     </h1>
   
 
-    </header>
+        <div>
+          
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/文章/">文章</a>
   </div>
+
+          
+              
+
+          
+        </div>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>正则表达式（英语：Regular Expression，在代码中常简写为regex、regexp或RE），又称正规表示式、正规表示法、正规表达式、规则表达式、常规表示法，是计算机科学的一个概念。正则表达式使用单个字符串来描述、匹配一系列匹配某个句法规则的字符串。在很多文本编辑器里，正则表达式通常被用来检索、替换那些匹配某个模式的文本。<br></p>
+</blockquote>
+<p>——维基百科<br><a id="more"></a></p>
+<p>简单来说，所谓正则表达式即是用一堆符号来表示一类文字，然后用某个搜索功能，例如<code>.match()</code>函数或其他语言或软件里的搜索功能进行关键字搜索，目的当然是为了省事，比如当你想找到一个html文件里的所有汉字，就可以直接在搜索框或者编写一个脚本，搜索<code>[\u4e00-\u9fa5]</code>，就可以返回全部的中文字符</p>
+<p>当然搜索只是正则表达式其中一个用处，在实际生产中，更多的还是用在表单验证或者网页输入框输入值校验上</p>
+<p><img src="http://wx1.sinaimg.cn/large/dcfc9dbaly1fpxzyhsbdrj20k0171dlm.jpg" alt="GitHub" title="GitHub,Social Coding" width="" height="600"><br><br>正则表达式语法</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/02/浅谈正则表达式/" data-id="cjfq44wii000vmczmkf0cr7l3" class="article-share-link">分享</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/正则表达式/">正则表达式</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/04/02/网络编程socket基本API详解/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">
+        
+          网络编程socket基本API详解
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/03/28/C语言自定义交换函数（swap）的正确使用姿势/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">下一篇</strong>
+      <div class="article-nav-title">C语言自定义交换函数（swap）的正确使用姿势</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+
+
+
+
+<div id="gitment"></div>
+<!-- ��ҳ��Ҫ����gitment -->
+
+<script>
+var gitment = new Gitment({
+  id: 'Mon Apr 02 2018 17:31:13 GMT+0800',
+  owner: 'william-scott',
+  repo: 'William-Scott.github.io',
+  oauth: {
+    client_id: '1dbfa70d518d89326cea',
+    client_secret: '86a61fc38e87bf8fcb166f232cefa25dc151fa30',
+  },
+})
+gitment.render('gitment')
+</script>
+ 
 
 </section>
         
