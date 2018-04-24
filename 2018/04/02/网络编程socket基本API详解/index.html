@@ -14,7 +14,7 @@
 <meta property="og:description" content="秉承着本人一贯的——学习新东西绝对会把坑踩个遍的客观规律，我怀着痛苦的心情开始学习网络编程基础……">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://wx1.sinaimg.cn/large/dcfc9dbaly1fpyny11qjsj20f20d8js4.jpg">
-<meta property="og:updated_time" content="2018-04-02T14:55:57.011Z">
+<meta property="og:updated_time" content="2018-04-21T10:52:11.922Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="网络编程socket基本API详解">
 <meta name="twitter:description" content="秉承着本人一贯的——学习新东西绝对会把坑踩个遍的客观规律，我怀着痛苦的心情开始学习网络编程基础……">
@@ -118,7 +118,12 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>秉承着本人一贯的——学习新东西绝对会把坑踩个遍的客观规律，我怀着痛苦的心情开始学习网络编程基础……<br><a id="more"></a></p>
-<p>学过计算机网络的朋友对下面这张图一定不会陌生<br><br><img src="http://wx1.sinaimg.cn/large/dcfc9dbaly1fpyny11qjsj20f20d8js4.jpg" alt=""><br><br>这样图可以简要表示socket在网络通信中所起的关键作用</p>
+<p>学过计算机网络的朋友对下面这张图一定不会陌生<br><br><img src="http://wx1.sinaimg.cn/large/dcfc9dbaly1fpyny11qjsj20f20d8js4.jpg" alt=""><br><br>这张图可以简要表示socket在网络通信中所起的关键作用</p>
+<p>也就是说socket层并不是真实存在于目前主流网络分层结构中，而是通过一种高级抽象来操作TCP&amp;UDP协议，目的当然是让网络编程更加便捷，由Socket相关函数来控制网络协议，开发者仅需要控制Socket函数就能方便调用各种网络功能。</p>
+<p>Socket函数在任何编程语言中都会有所涉及，本文是以C++作为示例，除去关键字不同，Socket在其他语言中的逻辑以及调用方法基本是相同的</p>
+<p>首先来了解一下Socket函数能干些什么</p>
+<p>socket能在计算机中单独开放一个端口，绑定各种属性，使其能与另外的计算机进行通讯，并且提供数据报的封装功能</p>
+<p>在C++中，socket位于winsock2.h头文件中</p>
 
       
     </div>
@@ -234,6 +239,10 @@ gitment.render('gitment')
       
         <a class="hvr-bounce-in" href="http://blog.shanamaid.top/" target="_blank" title="ShanaMaid">
           ShanaMaid
+        </a>
+      
+        <a class="hvr-bounce-in" href="http://catotk.com/" target="_blank" title="Catotk">
+          Catotk
         </a>
       
     </div>
