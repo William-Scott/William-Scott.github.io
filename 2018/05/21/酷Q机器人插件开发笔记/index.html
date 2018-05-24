@@ -5,14 +5,24 @@
   
   <title>酷Q机器人插件开发笔记 | 异丙纯的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="酷Q机器人是一个免费的QQ机器人框架，开发者提供了很多种SDK，让其他人能快速上手并开发出各种有意思功能的插件">
+<meta name="keywords" content="C++,酷Q机器人">
+<meta property="og:type" content="article">
 <meta property="og:title" content="酷Q机器人插件开发笔记">
 <meta property="og:url" content="http://yoursite.com/2018/05/21/酷Q机器人插件开发笔记/index.html">
 <meta property="og:site_name" content="异丙纯的博客">
+<meta property="og:description" content="酷Q机器人是一个免费的QQ机器人框架，开发者提供了很多种SDK，让其他人能快速上手并开发出各种有意思功能的插件">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-05-21T01:48:33.541Z">
+<meta property="og:image" content="http://wx3.sinaimg.cn/large/dcfc9dbaly1frmh0r90plj209m0b3jrh.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/dcfc9dbaly1frmhz20fpaj216b03x3yo.jpg">
+<meta property="og:image" content="http://wx1.sinaimg.cn/large/dcfc9dbaly1frmifirr5gj21690jpdh1.jpg">
+<meta property="og:image" content="http://wx2.sinaimg.cn/large/dcfc9dbaly1frmiflzfj4j21660jsgn6.jpg">
+<meta property="og:image" content="http://wx4.sinaimg.cn/large/dcfc9dbaly1frmifo0x6bj21670jsta3.jpg">
+<meta property="og:updated_time" content="2018-05-24T09:51:53.745Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="酷Q机器人插件开发笔记">
+<meta name="twitter:description" content="酷Q机器人是一个免费的QQ机器人框架，开发者提供了很多种SDK，让其他人能快速上手并开发出各种有意思功能的插件">
+<meta name="twitter:image" content="http://wx3.sinaimg.cn/large/dcfc9dbaly1frmh0r90plj209m0b3jrh.jpg">
   
     <link rel="alternate" href="/atom.xml" title="异丙纯的博客" type="application/atom+xml">
   
@@ -51,7 +61,7 @@
     <div class="count-box">
       <a href="/archives"><div><strong>15</strong><br>文章</div></a>
       <a href="/categories"><div><strong>3</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>23</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>24</strong><br>标签</div></a>
     </div>
     <ul class="blog-link">
      
@@ -98,6 +108,10 @@
 
         <div>
           
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/程序/">程序</a>
+  </div>
+
           
               
 
@@ -107,13 +121,42 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>酷Q机器人是一个免费的QQ机器人框架，开发者提供了很多种SDK，让其他人能快速上手并开发出各种有意思功能的插件<br><a id="more"></a></p>
+<p>本篇笔记以我个人角度，用我编写的第一个“<strong>井字棋</strong>”插件作为例子，从零开始解析酷Q机器人插件 <strong>C++</strong> 开发流程。当然，本文并不会涉及井字棋的功能实现，有好奇的同志请直接下载源码进行研究<a href="https://github.com/William-Scott/kuq-T3Chess" target="_blank" rel="noopener">酷Q井字棋</a></p>
+<h2 id="SDK构成"><a href="#SDK构成" class="headerlink" title="SDK构成"></a>SDK构成</h2><p><img src="http://wx3.sinaimg.cn/large/dcfc9dbaly1frmh0r90plj209m0b3jrh.jpg" alt=""></p>
+<p>下载完C++版的SDK，打开项目文件，我们会在解决方案管理器里看到以上几个文件。当然，我将项目名称和<code>.json</code>文件的重命名过，所以会有所不同。其中会在我们的开发中经常用到的，有以下几个：</p>
+<ul>
+<li>Header Filse<ul>
+<li>appmain.h</li>
+<li>cqp.h</li>
+</ul>
+</li>
+<li>Source Files<ul>
+<li>appmain.cpp</li>
+</ul>
+</li>
+<li>com.example.democ.json</li>
+</ul>
+<p>分别介绍一下：</p>
+<h3 id="appmain-h"><a href="#appmain-h" class="headerlink" title="appmain.h"></a>appmain.h</h3><p>这个头文件的内容是这样的：<br><img src="http://wx2.sinaimg.cn/large/dcfc9dbaly1frmhz20fpaj216b03x3yo.jpg" alt=""><br>主要用于酷Q加载插件时对插件的识别，开发者在第一次用的时候需要把CQAPPID之后的内容改为自己的内容，作为此插件的唯一ID</p>
+<h3 id="cqp-h"><a href="#cqp-h" class="headerlink" title="cqp.h"></a>cqp.h</h3><p><strong>这个头文件很重要</strong>，具体的内容是这样的：<br><img src="http://wx1.sinaimg.cn/large/dcfc9dbaly1frmifirr5gj21690jpdh1.jpg" alt=""><br>文件中列出了酷Q目前能提供的所有功能函数，以及使用方法,例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">CQAPI(int32_t) CQ_sendPrivateMsg(int32_t AuthCode, int64_t QQID, const char *msg);</span><br></pre></td></tr></table></figure></p>
+<p>指的是发送私聊消息功能的函数，可以这样调用<code>CQ_sendGroupMsg(ac, fromGroup, GameTitle);</code>“ac”为固定语法，没有理由；“fromGroup”为<code>int64</code>格式的数字，储存着发送目标的QQ号，“GameTitle”为<code>char *</code>格式的字符或字符数组，如果你用<code>char[]</code>或<code>string</code>格式储存字符，需要在调用此函数前转换成<code>char *</code>格式</p>
+<p>函数的返回值可以在酷Q的Debug窗口里看到</p>
+<h3 id="appmain-cpp"><a href="#appmain-cpp" class="headerlink" title="appmain.cpp"></a>appmain.cpp</h3><p><strong>这个文件相当重要</strong>，也是开发者主要修改的文件，具体的内容是这样的：<br><img src="http://wx2.sinaimg.cn/large/dcfc9dbaly1frmiflzfj4j21660jsgn6.jpg" alt=""><br>文件中列出了酷Q目前能提供的全部事件监视函数，也就是酷Q机器人的实现原理：<strong>利用事件监视回调函数在获知相应事件发生后，调用其中的方法，实现各种自定义功能</strong></p>
+<p>例如下面这个函数：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">CQEVENT(int32_t, __eventPrivateMsg, 24)(int32_t subType, int32_t msgId, int64_t fromQQ, const char *msg, int32_t font) &#123;</span><br><span class="line"></span><br><span class="line">	//如果要回复消息，请调用酷Q方法发送，并且这里 return EVENT_BLOCK - 截断本条消息，不再继续处理  注意：应用优先级设置为&quot;最高&quot;(10000)时，不得使用本返回值</span><br><span class="line">	//如果不回复消息，交由之后的应用/过滤器处理，这里 return EVENT_IGNORE - 忽略本条消息</span><br><span class="line">	return EVENT_IGNORE;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>当酷Q获知“有人发送私聊消息”这个事件时，执行此函数，调用其中的各种开发者编写的内容，例如发送回发私聊消息之类。每个函数接受的形参均有不同，基本足够开发者使用，例如“fromQQ”，储存着对方的QQ号，如果想要回发消息，直接将此形参传入<code>CQ_sendPrivateMsg(ac, fromQQ, msg);</code>即可</p>
+<h3 id="com-example-democ-json"><a href="#com-example-democ-json" class="headerlink" title="com.example.democ.json"></a>com.example.democ.json</h3><p>这个文件的内容是这样的：<br><img src="http://wx4.sinaimg.cn/large/dcfc9dbaly1frmifo0x6bj21670jsta3.jpg" alt=""><br>开发者需要将自己插件的信息写进去，并且删除一些没有用到的权限</p>
+<h2 id="酷Q原理"><a href="#酷Q原理" class="headerlink" title="酷Q原理"></a>酷Q原理</h2><p>略</p>
+<h2 id="插件生成"><a href="#插件生成" class="headerlink" title="插件生成"></a>插件生成</h2><p>插件开发完成后，编译，自动生成dll文件，将dll和json放入酷Q根目录app文件夹内，即可进行插件测试。功能正常后即可打包上线发布</p>
+
       
     </div>
     <footer class="article-footer">
       <a data-url="http://yoursite.com/2018/05/21/酷Q机器人插件开发笔记/" data-id="cjhfle48o000l7szm85m6w24y" class="article-share-link">分享</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/酷Q机器人/">酷Q机器人</a></li></ul>
+
     </footer>
   </div>
   
@@ -193,7 +236,7 @@ gitment.render('gitment')
     <div class="count-box">
       <a href="/archives"><div><strong>15</strong><br>文章</div></a>
       <a href="/categories"><div><strong>3</strong><br>分类</div></a>
-      <a href="/tags"><div><strong>23</strong><br>标签</div></a>
+      <a href="/tags"><div><strong>24</strong><br>标签</div></a>
     </div>
 
 
